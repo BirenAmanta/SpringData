@@ -65,7 +65,7 @@ public class BookServiceImpl implements BookService {
 			});
 			return allList;
 		}
-		throw new BookException("Service.BOOKS_NOT_FOUND");
+		throw new BookException("Service.BOOKS_NOT_FOUND_IN_DATABASE");
 	}
 
 	@Override
@@ -87,7 +87,7 @@ public class BookServiceImpl implements BookService {
 			});
 			return allList;
 		}
-		throw new BookException("Service.BOOKS_NOT_FOUND");
+		throw new BookException("Service.BOOKS_NOT_FOUND_IN_DATABASE");
 	}
 
 	@Override
@@ -109,7 +109,7 @@ public class BookServiceImpl implements BookService {
 			});
 			return allList;
 		}
-		throw new BookException("Service.BOOKS_NOT_FOUND");
+		throw new BookException("Service.BOOKS_NOT_FOUND_IN_DATABASE");
 	}
 
 	@Override
@@ -131,7 +131,7 @@ public class BookServiceImpl implements BookService {
 			});
 			return allList;
 		}
-		throw new BookException("Service.BOOKS_NOT_FOUND");
+		throw new BookException("Service.BOOKS_NOT_FOUND_IN_DATABASE");
 	}
 
 	@Override
@@ -153,7 +153,7 @@ public class BookServiceImpl implements BookService {
 			});
 			return allList;
 		}
-		throw new BookException("Service.BOOKS_NOT_FOUND");
+		throw new BookException("Service.BOOKS_NOT_FOUND_IN_DATABASE");
 	}
 
 	@Override
@@ -175,20 +175,20 @@ public class BookServiceImpl implements BookService {
 			});
 			return allList;
 		}
-		throw new BookException("Service.BOOKS_NOT_FOUND");
+		throw new BookException("Service.BOOKS_NOT_FOUND_IN_DATABASE");
 	}
 
 	@Override
 	public void updateBookPrice(Integer bookId, Integer price) throws BookException {
 		Optional<Book> data = bookRepository.findById(bookId);
-		Book book = data.orElseThrow(() -> new BookException("Service.BOOK_NOT_FOUND"));
+		Book book = data.orElseThrow(() -> new BookException("Service.BOOK_NOT_FOUND_IN_DATABASE"));
 		book.setPrice(price);
 	}
 
 	@Override
 	public void deleteBook(Integer bookId) throws BookException {
 		Optional<Book> data = bookRepository.findById(bookId);
-		data.orElseThrow(() -> new BookException("Service.BOOK_NOT_FOUND"));
+		data.orElseThrow(() -> new BookException("Service.BOOK_NOT_FOUND_IN_DATABASE"));
 		bookRepository.deleteById(bookId);
 
 	}

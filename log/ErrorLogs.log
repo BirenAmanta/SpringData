@@ -18,3 +18,9 @@
 24-Apr-2022 16:55:57 ERROR - could not extract ResultSet; SQL [n/a]; nested exception is org.hibernate.exception.SQLGrammarException: could not extract ResultSet
 24-Apr-2022 16:55:57 ERROR - could not extract ResultSet; SQL [n/a]; nested exception is org.hibernate.exception.SQLGrammarException: could not extract ResultSet
 24-Apr-2022 16:55:57 ERROR - could not extract ResultSet; SQL [n/a]; nested exception is org.hibernate.exception.SQLGrammarException: could not extract ResultSet
+08-May-2022 11:55:50 ERROR - Book already present. So cannot be added.
+08-May-2022 11:55:50 ERROR - Service.BOOK_NOT_FOUND
+08-May-2022 11:55:50 ERROR - Service.BOOK_NOT_FOUND
+08-May-2022 12:02:14 ERROR - Book already present. So cannot be added.
+08-May-2022 12:02:14 ERROR - Book is not present in the database
+08-May-2022 12:02:14 ERROR - Book is not present in the database
